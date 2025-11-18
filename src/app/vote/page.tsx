@@ -1,185 +1,127 @@
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Image from "next/image";
-import Link from "next/link";
+'use client'
 
-export default function Vote() {
-  return (
-    <>
-      <div>
-        <div className="md:hidden mb-4">
-          <Tabs defaultValue="account" className="w-full">
-            <TabsList className="w-full">
-              <TabsTrigger value="account">
-                Tham gia{" "}
-                <span className="text text-shadow-default text-base text-blue-500 ml-2">
-                  23
-                </span>
-              </TabsTrigger>
-              <TabsTrigger value="password">
-                Xin vắng{" "}
-                <span className="text text-shadow-default text-base text-red-500 ml-2">
-                  23
-                </span>
-              </TabsTrigger>
-              <TabsTrigger value="password1">
-                Chưa bình chọn{" "}
-                <span className="text text-shadow-default text-base text-orange-500 ml-2">
-                  23
-                </span>
-              </TabsTrigger>
-            </TabsList>
-            <TabsContent value="account">
-              <ScrollArea className="vote-content vote-content-mobile">
-                Jokester began sneaking into the castle in the middle of the
-                night and leaving jokes all over the place: under the king's
-                pillow, in his soup, even in the royal toilet. The king was
-                furious, but he couldn't seem to stop Jokester. And then, one
-                day, the people of the kingdom discovered that the jokes left by
-                Jokester were so funny that they couldn't help but laugh. And
-                once they started laughing, they couldn't stop. Jokester began
-                sneaking into the castle in the middle of the night and leaving
-                jokes all over the place: under the king's pillow, in his soup,
-                even in the royal toilet. The king was furious, but he couldn't
-                seem to stop Jokester. And then, one day, the people of the
-                kingdom discovered that the jokes left by Jokester were so funny
-                that they couldn't help but laugh. And once they started
-                laughing, they couldn't stop.Jokester began sneaking into the
-                castle in the middle of the night and leaving jokes all over the
-                place: under the king's pillow, in his soup, even in the royal
-                toilet. The king was furious, but he couldn't seem to stop
-                Jokester. And then, one day, the people of the kingdom
-                discovered that the jokes left by Jokester were so funny that
-                they couldn't help but laugh. And once they started laughing,
-                they couldn't stop.Jokester began sneaking into the castle in
-                the middle of the night and leaving jokes all over the place:
-                under the king's pillow, in his soup, even in the royal toilet.
-                The king was furious, but he couldn't seem to stop Jokester. And
-                then, one day, the people of the kingdom discovered that the
-                jokes left by Jokester were so funny that they couldn't help but
-                laugh. And once they started laughing, they couldn't
-                stop.Jokester began sneaking into the castle in the middle of
-                the night and leaving jokes all over the place: under the king's
-                pillow, in his soup, even in the royal toilet. The king was
-                furious, but he couldn't seem to stop Jokester. And then, one
-                day, the people of the kingdom discovered that the jokes left by
-                Jokester were so funny that they couldn't help but laugh. And
-                once they started laughing, they couldn't stop.Jokester began
-                sneaking into the castle in the middle of the night and leaving
-                jokes all over the place: under the king's pillow, in his soup,
-                even in the royal toilet. The king was furious, but he couldn't
-                seem to stop Jokester. And then, one day, the people of the
-                kingdom discovered that the jokes left by Jokester were so funny
-                that they couldn't help but laugh. And once they started
-                laughing, they couldn't stop.Jokester began sneaking into the
-                castle in the middle of the night and leaving jokes all over the
-                place: under the king's pillow, in his soup, even in the royal
-                toilet. The king was furious, but he couldn't seem to stop
-                Jokester. And then, one day, the people of the kingdom
-                discovered that the jokes left by Jokester were so funny that
-                they couldn't help but laugh. And once they started laughing,
-                they couldn't stop.
-              </ScrollArea>
-            </TabsContent>
-            <TabsContent value="password">
-              Change your password here.
-            </TabsContent>
-            <TabsContent value="password1">
-              Change your password here.
-            </TabsContent>
-          </Tabs>
-        </div>
-        <div className="flex-1 z-10 py-4 text-left hidden md:block">
-          <div className="flex">
-            <h2 className="md:text-lg flex-1">
-              Chi tiết bình chọn tham gia trận đấu ngày <b>10/12/2023</b> - Sân
-              C1
-            </h2>
-          </div>
-          <div className="z-10 pt-4  mt-2 grid text-center md:w-full grid-cols-3 md:text-left space-x-2 md:space-x-4">
-            <div>
-              <div className="relative rounded-lg px-2 py-1 md:p-4 bg-blue-100 text-left">
-                Tham gia{" "}
-                <span className="absolute text text-shadow-default text-[20px] md:text-[70px] text-blue-500 -bottom-2 right-4 drop-shadow-3xl">
-                  23
-                </span>
-              </div>
-              <ScrollArea className="vote-content">
-                Jokester began sneaking into the castle in the middle of the
-                night and leaving jokes all over the place: under the king's
-                pillow, in his soup, even in the royal toilet. The king was
-                furious, but he couldn't seem to stop Jokester. And then, one
-                day, the people of the kingdom discovered that the jokes left by
-                Jokester were so funny that they couldn't help but laugh. And
-                once they started laughing, they couldn't stop.
-              </ScrollArea>
-            </div>
-            <div>
-              <div className="relative rounded-lg px-2 py-1 md:p-4  bg-red-100 text-left">
-                Xin vắng{" "}
-                <span className="absolute text text-shadow-default text-[20px] md:text-[70px] text-red-500 -bottom-2 right-4 drop-shadow-3xl">
-                  13
-                </span>
-              </div>
-              <ScrollArea className="vote-content">
-                Jokester began sneaking into the castle in the middle of the
-                night and leaving jokes all over the place: under the king's
-                pillow, in his soup, even in the royal toilet. The king was
-                furious, but he couldn't seem to stop Jokester. And then, one
-                day, the people of the kingdom discovered that the jokes left by
-                Jokester were so funny that they couldn't help but laugh. And
-                once they started laughing, they couldn't stop.
-              </ScrollArea>
-            </div>
-            <div>
-              <div className="relative rounded-lg px-2 py-1 md:p-4 bg-orange-100 text-left">
-                Chưa bình chọn{" "}
-                <span className="absolute text text-shadow-default text-[20px] md:text-[70px] text-orange-500 -bottom-2 right-4 drop-shadow-3xl">
-                  10
-                </span>
-              </div>
-              <ScrollArea className="vote-content">
-                Jokester began sneaking into the castle in the middle of the
-                night and leaving jokes all over the place: under the king's
-                pillow, in his soup, even in the royal toilet. The king was
-                furious, but he couldn't seem to stop Jokester. And then, one
-                day, the people of the kingdom discovered that the jokes left by
-                Jokester were so funny that they couldn't help but laugh. And
-                once they started laughing, they couldn't stop.
-              </ScrollArea>
-            </div>
-          </div>
-        </div>
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button size="lg" className="w-full">
-              Đổi Bình Chọn
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-[90%] w-[500px] rounded-lg">
-            <DialogHeader>
-              <DialogTitle>Edit profile</DialogTitle>
-              <DialogDescription>
-                Make changes to your profile here. Click save when you're done.
-              </DialogDescription>
-            </DialogHeader>
-            <div className="grid gap-4 py-4">sssss</div>
-            <DialogFooter>
-              <Button type="submit">Save changes</Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-      </div>
-    </>
-  );
+import { useState, useRef } from 'react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { cn } from '@/lib/utils'
+
+const MEMBERS = [
+  'Team 1',
+  'Team 2',
+  'Team 3',
+  'Team 4',
+  'Team 5',
+  'Team 6',
+  'Team 7',
+  'Team 8',
+]
+
+interface Pair {
+  member1: string
+  member2: string
 }
+
+export default function Home() {
+  const [pairs, setPairs] = useState<Pair[]>([]);
+  const [count, setCount] = useState<number>(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const shuffleArray = <T,>(array: T[]): T[] => {
+    const shuffled = [...array]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+        ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    return shuffled
+  }
+
+  const generatePairs = () => {
+    setCount((prevCount) => {
+      const newCount = prevCount + 1;
+
+      if (newCount >= 30) {
+        // Dừng interval sau 30 lần
+        if (intervalRef.current) {
+          clearInterval(intervalRef.current);
+          intervalRef.current = null;
+        }
+        return newCount;
+      }
+
+      // Tạo cặp mới
+      const shuffled = shuffleArray(MEMBERS)
+      const newPairs: Pair[] = []
+
+      for (let i = 0; i < shuffled.length; i += 2) {
+        if (i + 1 < shuffled.length) {
+          newPairs.push({
+            member1: shuffled[i],
+            member2: shuffled[i + 1],
+          })
+        }
+      }
+
+      setPairs(newPairs)
+      return newCount;
+    });
+  }
+
+  const repeatPairsInterval = () => {
+    // Dừng interval cũ nếu có
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
+    // Reset count về 0
+    setCount(0);
+
+    // Bắt đầu interval mới
+    intervalRef.current = setInterval(() => {
+      generatePairs();
+    }, 100);
+  }
+
+  return (
+    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-background to-muted/20">
+      <Card className="w-full max-w-4xl shadow-lg">
+        <CardHeader className="text-center">
+          <CardTitle className="text-4xl">🎯 Random Cặp Đấu</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-8">
+          <div className="flex justify-center">
+            <Button 
+              size="lg"
+              onClick={repeatPairsInterval}
+            >
+              🎲 Random Cặp Đấu
+            </Button>
+          </div>
+
+          <div className="space-y-6">
+            <h2 className="text-center text-3xl font-semibold">Kết quả cặp đấu:</h2>
+            <div className="grid gap-5 space-y-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+              {pairs?.length > 0 && pairs?.map((pair, index) => (
+                <div 
+                  key={index} 
+                  className={cn(
+                    "bg-gradient-to-br from-primary to-primary/80 border-0 shadow-md animate-fadeIn rounded-lg border"
+                  )}
+                >
+                  <div className='p-6 flex flex-col items-center justify-center text-center'>
+                    <div className="text-sm opacity-90 mb-2.5 font-medium">Cặp {index + 1}</div>
+                    <div className="text-xl w-full font-semibold my-2.5 flex items-center justify-center">
+                      <span className="flex-1">{pair.member1}</span>
+                      <span className="mx-2.5 opacity-80">VS</span>
+                      <span className="flex-1">{pair.member2}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  )
+}
+
