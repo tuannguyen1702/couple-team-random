@@ -82,11 +82,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-background to-muted/20">
-      <Card className="w-full max-w-4xl shadow-lg">
-        <CardHeader className="text-center">
-          <CardTitle className="text-4xl">🎯 Random Cặp Đấu</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-8">
+      <div className="w-full max-w-4xl shadow-lg">
+        <div className="text-center">
+          <div className="text-4xl">🎯 Random Cặp Đấu</div>
+        </div>
+        <div className="space-y-8">
           <div className="flex justify-center">
             <Button 
               size="lg"
@@ -118,8 +118,8 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </div>
   )
 }
