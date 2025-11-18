@@ -81,44 +81,105 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-background to-muted/20">
-      <div className="w-full max-w-4xl shadow-lg">
-        <div className="text-center">
-          <div className="text-4xl">🎯 Random Cặp Đấu</div>
-        </div>
+    <div className='pt-[84px] md:py-0'>
+      <div className="max-w-4xl mx-auto space-y-6">
         <div className="space-y-8">
-          <div className="flex justify-center">
-            <Button 
-              size="lg"
-              onClick={repeatPairsInterval}
-            >
-              🎲 Random Cặp Đấu
-            </Button>
-          </div>
 
           <div className="space-y-6">
-            <h2 className="text-center text-3xl font-semibold">Kết quả cặp đấu:</h2>
-            <div className="grid gap-5 space-y-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-              {pairs?.length > 0 && pairs?.map((pair, index) => (
-                <div 
-                  key={index} 
+            <h2 className="text-center font-semibold">Các cặp đấu</h2>
+            <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+              {pairs?.length > 0 ? pairs?.map((pair, index) => (
+                <div
+                  key={index}
                   className={cn(
-                    "bg-gradient-to-br from-primary to-primary/80 border-0 shadow-md animate-fadeIn rounded-lg border"
+                    "bg-gradient-to-br from-blue-200 to-blue-200/80 border-0 shadow-md animate-fadeIn rounded-lg"
                   )}
                 >
-                  <div className='p-6 flex flex-col items-center justify-center text-center'>
+                  <div className='px-5 py-2 flex flex-col items-center justify-center text-center'>
                     <div className="text-sm opacity-90 mb-2.5 font-medium">Cặp {index + 1}</div>
                     <div className="text-xl w-full font-semibold my-2.5 flex items-center justify-center">
-                      <span className="flex-1">{pair.member1}</span>
+                      <span className="flex-1 rounded-md p-2 bg-white/80">{pair.member1}</span>
                       <span className="mx-2.5 opacity-80">VS</span>
-                      <span className="flex-1">{pair.member2}</span>
+                      <span className="flex-1 rounded-md p-2 bg-white/80">{pair.member2}</span>
                     </div>
                   </div>
                 </div>
-              ))}
+              )) : (
+                <><div
+
+                  className={cn(
+                    "bg-gradient-to-br from-blue-200 to-blue-200/80 border-0 shadow-md animate-fadeIn rounded-lg"
+                  )}
+                >
+                  <div className='px-5 py-2 flex flex-col items-center justify-center text-center'>
+                    <div className="text-sm opacity-90 mb-2.5 font-medium">Cập 1</div>
+                    <div className="text-xl w-full font-semibold my-2.5 flex items-center justify-center">
+                      <span className="flex-1 rounded-md p-2 bg-white/80">&nbsp;</span>
+                      <span className="mx-2.5 opacity-80">VS</span>
+                      <span className="flex-1 rounded-md p-2 bg-white/80">&nbsp;</span>
+                    </div>
+                  </div>
+
+                </div>
+                  <div
+
+                    className={cn(
+                      "bg-gradient-to-br from-blue-200 to-blue-200/80 border-0 shadow-md animate-fadeIn rounded-lg"
+                    )}
+                  >
+                    <div className='px-5 py-2 flex flex-col items-center justify-center text-center'>
+                      <div className="text-sm opacity-90 mb-2.5 font-medium">Cập 2</div>
+                      <div className="text-xl w-full font-semibold my-2.5 flex items-center justify-center">
+                        <span className="flex-1 rounded-md p-2 bg-white/80">&nbsp;</span>
+                        <span className="mx-2.5 opacity-80">VS</span>
+                        <span className="flex-1 rounded-md p-2 bg-white/80">&nbsp;</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div
+
+                    className={cn(
+                      "bg-gradient-to-br from-blue-200 to-blue-200/80 border-0 shadow-md animate-fadeIn rounded-lg"
+                    )}
+                  >
+                    <div className='px-5 py-2 flex flex-col items-center justify-center text-center'>
+                      <div className="text-sm opacity-90 mb-2.5 font-medium">Cập 3</div>
+                      <div className="text-xl w-full font-semibold my-2.5 flex items-center justify-center">
+                        <span className="flex-1 rounded-md p-2 bg-white/80">&nbsp;</span>
+                        <span className="mx-2.5 opacity-80">VS</span>
+                        <span className="flex-1 rounded-md p-2 bg-white/80">&nbsp;</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div
+
+                    className={cn(
+                      "bg-gradient-to-br from-blue-200 to-blue-200/80 border-0 shadow-md animate-fadeIn rounded-lg"
+                    )}
+                  >
+                    <div className='px-5 py-2 flex flex-col items-center justify-center text-center'>
+                      <div className="text-sm opacity-90 mb-2.5 font-medium">Cập 4</div>
+                      <div className="text-xl w-full font-semibold my-2.5 flex items-center justify-center">
+                        <span className="flex-1 rounded-md p-2 bg-white/80">&nbsp;</span>
+                        <span className="mx-2.5 opacity-80">VS</span>
+                        <span className="flex-1 rounded-md p-2 bg-white/80">&nbsp;</span>
+                      </div>
+                    </div>
+
+                  </div></>
+              )}
             </div>
           </div>
         </div>
+        <Button
+          className='w-full'
+          size="lg"
+          onClick={repeatPairsInterval}
+        >
+          🎲 Random Cặp Đấu
+        </Button>
       </div>
     </div>
   )
