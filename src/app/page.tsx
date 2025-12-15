@@ -72,7 +72,7 @@ export default function Home() {
       </h1>
       <div className="flex-1 z-10 pb-4 md:pt-4 text-left">
         <div
-          className={`z-10 pt-4  mt-2 grid text-center md:w-full grid-cols-2 md:grid-cols-3 md:text-left gap-x-4 gap-y-8`}
+          className={`z-10 pt-4  mt-2 grid text-center md:w-full grid-cols-2 md:grid-cols-4 md:text-left gap-x-4 gap-y-8`}
         >
           {Array.from(Array(totalTeam).keys()).map((team) => (
             <div key={team}>
@@ -85,6 +85,8 @@ export default function Home() {
                 data-[team='4']:bg-green-200 
                 data-[team='5']:bg-violet-200 
                 data-[team='6']:bg-pink-200 
+                data-[team='7']:bg-indigo-200 
+                data-[team='8']:bg-sky-200 
                 text-left"
               >
                 <span>
@@ -97,7 +99,9 @@ export default function Home() {
                 group-data-[team='2']:text-yellow-500 
                 group-data-[team='4']:text-green-500 
                 group-data-[team='5']:text-violet-500 
-                group-data-[team='6']:text-pink-500 
+                group-data-[team='6']:text-pink-500
+                group-data-[team='7']:text-indigo-500 
+                group-data-[team='8']:text-sky-500
                 md:text-[70px] bottom-0 md:-bottom-2 
                 right-4 drop-shadow-3xl"
                 >
