@@ -98,24 +98,24 @@ async function someAsyncFunction(data: any, i: number) {
     setTimeout(() => {
       const newRow = [];
 
-      if (dataCompare.length && i === 1) {
+      // if (dataCompare.length && i === 1) {
 
-        const i1 = (dataCompare[i] as number[]).indexOf(5);
-        const i2 = (dataCompare[i] as number[]).indexOf(0);
+      //   const i1 = (dataCompare[i] as number[]).indexOf(5);
+      //   const i2 = (dataCompare[i] as number[]).indexOf(0);
 
-        const r1 = (dataCompare[0] as number[]).indexOf(2);
-        const r2 = (dataCompare[0] as number[]).indexOf(4);
+      //   const r1 = (dataCompare[0] as number[]).indexOf(2);
+      //   const r2 = (dataCompare[0] as number[]).indexOf(4);
 
-        const newData = dataCompare[i];
+      //   const newData = dataCompare[i];
 
-        const t1 = dataCompare[i][r1];
-        const t2 = dataCompare[i][r2];
+      //   const t1 = dataCompare[i][r1];
+      //   const t2 = dataCompare[i][r2];
         
-        newData[r1] = 5;
-        newData[r2] = 0;
-        newData[i1] = t1;
-        newData[i2] = t2;
-      }
+      //   newData[r1] = 5;
+      //   newData[r2] = 0;
+      //   newData[i1] = t1;
+      //   newData[i2] = t2;
+      // }
 
       for (let j = 0; j < randomArr.length; j++) {
         const el = document.getElementById(`group-${j + 1}-name-${i + 1}`);
@@ -130,8 +130,8 @@ async function someAsyncFunction(data: any, i: number) {
 function generateUniqueRandomNumbers(min: number, max: number) {
   const uniqueNumbers: number[] = [];
 
-  while (uniqueNumbers.length < max - min + 5) {
-    const randomNumber = Math.floor(Math.random() * (max - min + 5)) + min;
+  while (uniqueNumbers.length < max - min + 7) {
+    const randomNumber = Math.floor(Math.random() * (max - min + 7)) + min;
 
     if (!uniqueNumbers.includes(randomNumber)) {
       uniqueNumbers.push(randomNumber);
