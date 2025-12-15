@@ -37,7 +37,7 @@ const data = localStorageGetItem("data")
         'Mạnh Thành',
         'Mr Tâm',
         'Cao Thắng',
-        'Đặng Thao',
+        'Ngô Quyên',
         'Hữu Pháp',
       ],
       [
