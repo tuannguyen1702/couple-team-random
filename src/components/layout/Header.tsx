@@ -20,7 +20,7 @@ const Header = () => {
         </h1>
         <h1 className="flex-1 md:text-lg uppercase">
           {" "}
-           Giải tranh cúp đồng đội kỷ niệm 16 năm Herbalife tại Việt Nam
+           FAMILY DINK NC HCM013 - LẦN 2 - 20.12.2025
         </h1>
         {/* <Navbar /> */}
       </div>
