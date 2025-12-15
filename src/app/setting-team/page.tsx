@@ -20,7 +20,7 @@ export default function SettingTeam() {
   return (
     <div>
       <div className="flex-1 z-10 py-4 text-left">
-        <div className={`z-10 pt-4  mt-2 grid text-center md:w-full grid-cols-2 md:grid-cols-${totalTeam} md:text-left gap-x-4 gap-y-8`}>
+        <div className={`z-10 pt-4  mt-2 grid text-center md:w-full grid-cols-2 md:grid-cols-4 md:text-left gap-x-4 gap-y-8`}>
           {Array.from(Array(totalTeam).keys()).map((team) => (
             <div key={team}>
               <div
